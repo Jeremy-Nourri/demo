@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import {
     Text,
     Modal,
@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 export default function FormModal(props) {
-    const { modalVisible, setModalVisible, addArticle } = props;
+    const {modalVisible, setModalVisible, addArticle} = props;
     const [text, setText] = useState('');
 
     const handleInput = () => {
@@ -17,19 +17,15 @@ export default function FormModal(props) {
             addArticle(text);
             setText('');
         }
-    }
+    };
 
     return (
-        <Modal
-            animationType='slide'
-            transparent={true}
-            visible={modalVisible}
-        >
+        <Modal animationType="slide" transparent={true} visible={modalVisible}>
             <View style={styles.modalView}>
                 <Text style={styles.modalText}>Ajouter un article</Text>
                 <TextInput
                     style={styles.input}
-                    onChangeText={(inputText) => setText(inputText)}
+                    onChangeText={inputText => setText(inputText)}
                     value={text}
                 />
                 <Pressable
