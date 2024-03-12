@@ -17,8 +17,9 @@ const Item = props => {
 const styles = StyleSheet.create({
     item: {
         color: 'black',
+        width: '100%',
         textAlign: 'center',
-        padding: 26,
+        padding: 20,
         marginTop: 16,
         borderColor: '#bbb',
         borderWidth: 1,
